@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  postgres:
+    build: ./database/
+    container_name: 'sellpointapi-db'
+    volumes: 
+      - data:/var/lib/postgresql/data:w
+  web:
+    build: .
+    hostname: "web"
+    container_name: 'sellpointapi-src'
+    working_dir: /home/app/library/
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    links:
+      - postgres
