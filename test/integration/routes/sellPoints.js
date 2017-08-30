@@ -29,7 +29,7 @@ describe('Routes SellPoints', () => {
   });
 
   describe('Route GET /pdvs', () => {
-    it('should return a list of stores', (done) => {
+    it('should return a list of sell points', (done) => {
       request
         .get('/pdvs')
         .end((err, res) => {

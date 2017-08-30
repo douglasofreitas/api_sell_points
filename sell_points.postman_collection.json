@@ -1,0 +1,137 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ZXVentures - PDVs",
+		"_postman_id": "6a605642-466e-195b-15a1-572b86d96dfd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST pdvs",
+			"request": {
+				"url": "http://localhost:8081/pdvs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET pdvs",
+			"request": {
+				"url": "http://localhost:8081/pdvs",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET pdvs LOADDEMO",
+			"request": {
+				"url": "http://localhost:8081/pdvs",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET pdv",
+			"request": {
+				"url": "http://localhost:8081/pdvs",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET pdv find",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/pdvs/find?lat=-40&long=-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pdvs",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-40",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "long",
+							"value": "-21",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

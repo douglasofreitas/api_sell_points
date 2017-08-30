@@ -5,6 +5,15 @@ export default (app) => {
         app.datasource.models.sell_points,
         app.datasource.sequelize);
 
+  app.route('/pdvs/initDemo')
+    .get((req, res) => {
+      sellPointsController.loadDemo()
+        .then((response) => {
+          res.status(response.statusCode);
+          res.json({ pdvs: response.data });
+        });
+    });
+
   app.route('/pdvs')
     .get((req, res) => {
       sellPointsController.getAll(req.params, req.query)
