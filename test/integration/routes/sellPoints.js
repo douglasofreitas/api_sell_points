@@ -44,31 +44,19 @@ describe('Routes SellPoints', () => {
     });
   });
 
-//   describe('Route GET /classifications?cycle=2017-01', () => {
-//     it('should return a list of categories by cycle', (done) => {
-//       request
-//         .get('/classifications?cycle=2017-01')
-//         .set('Authorization', `JWT ${token}`)
-//         .end((err, res) => {
-//           expect(res.body[0].id).to.be.eql(defaultCategory.id);
-//           expect(res.body[0].name).to.be.eql(defaultCategory.name);
-//           expect(res.body[0].type).to.be.eql(defaultCategory.type);
-//           expect(res.body[0]._link.href).to.be.eql(defaultCategory.link_href);
-//           expect(res.body[0]._link.rel).to.be.eql(defaultCategory.link_rel);
-//           done(err);
-//         });
-//     });
-//   });
-
-//   describe('Route GET /classifications/{classification_id}/prodcuts?cycle=2017-01}', () => {
-//     it('should return a list of product ids ', (done) => {
-//       request
-//         .get('/classifications/1/products?cycle=2017-01')
-//         .set('Authorization', `JWT ${token}`)
-//         .end((err, res) => {
-//           expect(res.body[0].product_id).to.be.eql(defaultCategoryProduct.product_id);
-//           done(err);
-//         });
-//     });
-//   });
+  describe('Route GET /pdv/1', () => {
+    it('should return a list of sell points', (done) => {
+      request
+        .get('/pdvs/1')
+        .end((err, res) => {
+          expect(res.body.id).to.be.eql(defaultSellPoint.id);
+          expect(res.body.tradingName).to.be.eql(defaultSellPoint.tradingName);
+          expect(res.body.ownerName).to.be.eql(defaultSellPoint.ownerName);
+          expect(res.body.document).to.be.eql(defaultSellPoint.document);
+          expect(res.body.coverageArea).to.be.eql(defaultSellPoint.coverageArea);
+          expect(res.body.address).to.be.eql(defaultSellPoint.address);
+          done(err);
+        });
+    });
+  });
 });
