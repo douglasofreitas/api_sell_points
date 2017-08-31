@@ -18,13 +18,14 @@ const loadModels = (sequelize) => {
 
 export default() => {
   if (!database) {
+    console.log('process.env', process.env);
     const sequelize = new Sequelize(
-      process.env.DATABASE || config.database || 'sell_point',
-      process.env.DATABASE_USER || config.database_user || 'root',
-      process.env.DATABASE_PWD || config.database_password || 'pwd',
+      process.env.database || config.database || 'sell_point',
+      process.env.database_user || config.database_user || 'root',
+      process.env.database_password || config.database_password || 'pwd',
       {
         dialect: config.params.dialect || 'postgres',
-        host: process.env.DATABASE_HOST || config.params.host,
+        host: process.env.database_host || config.params.host,
       },
     );
     database = {

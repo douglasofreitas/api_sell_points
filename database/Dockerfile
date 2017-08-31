@@ -6,5 +6,3 @@ ENV POSTGRES_PASSWORD postgres
 USER root
 RUN chown -R postgres:postgres /var/lib/postgresql/
 RUN chmod -R 777 /var/lib/postgresql/
-
-ADD init.sql /docker-entrypoint-initdb.d

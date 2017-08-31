@@ -9,7 +9,8 @@ RUN chown -R app:app $HOME/*
 
 USER app
 WORKDIR $HOME/library
-# RUN npm cache clean && npm install --silent --progress=false
+RUN npm cache clean 
+RUN npm install --silent --progress=false
 
 USER root
 COPY . $HOME/library

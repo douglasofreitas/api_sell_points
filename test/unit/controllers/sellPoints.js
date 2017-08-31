@@ -1,7 +1,6 @@
 import SellPointsController from '../../../src/controllers/sellPoints';
 
 describe('Controllers: SellPoints', () => {
-
   const expectedResponse = [{
     id: 1,
     tradingName: 'Adega da Cerveja - Pinheiros',
@@ -25,7 +24,7 @@ describe('Controllers: SellPoints', () => {
       const SellPoints = {
         findAll: td.function(),
       };
-[
+
       td.when(SellPoints.findAll({})).thenResolve(expectedResponse);
       const sellPointsController = new SellPointsController(SellPoints);
       return sellPointsController.getAll({})

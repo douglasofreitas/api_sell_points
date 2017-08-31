@@ -13,6 +13,4 @@ export default {
       underscored: true,
     },
   },
-  jwtSecret: `${process.env.SecretKeyClickCollect}`,
-  jwtSession: { session: false },
 };

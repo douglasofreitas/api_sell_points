@@ -61,7 +61,6 @@ class SellPointsController {
               address: JSON.parse(obj.address),
             },
           ));
-          console.log(formatListPdvs);
           Promise.all(formatListPdvs.map(obj => this.SellPoint.create(obj)))
           .then((values) => {
             resolve(defaultResponse(values));

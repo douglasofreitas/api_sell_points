@@ -3,9 +3,10 @@ version: '2'
 services:
   postgres:
     build: ./database/
-    container_name: 'sellpointapi-db'
+    container_name: 'sellpointapi_db'
     volumes: 
-      - data:/var/lib/postgresql/data:w
+      - $PWD/data:/var/lib/postgresql/data
+      - $PWD/database/init.sql:/docker-entrypoint-initdb.d/zinit.sql
   web:
     build: .
     hostname: "web"
