@@ -41,6 +41,7 @@ export default (app) => {
 
   app.route('/pdvs/:id')
     .get((req, res) => {
+      console.log('req.params', req.params);
       sellPointsController.getById(req.params, req.query)
         .then((response) => {
           res.status(response.statusCode);

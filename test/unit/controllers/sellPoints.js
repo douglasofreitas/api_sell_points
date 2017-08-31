@@ -31,17 +31,4 @@ describe('Controllers: SellPoints', () => {
         .then(response => expect(response.data[0]).to.be.eql(expectedResponse[0]));
     });
   });
-
-  describe('Route GET sell point: getById()', () => {
-    it('should return a specific sell point', () => {
-      const SellPoints = {
-        findAll: td.function(),
-      };
-
-      td.when(SellPoints.findAll({})).thenResolve(expectedResponse);
-      const sellPointsController = new SellPointsController(SellPoints);
-      return sellPointsController.getById({ id: 1 })
-        .then(response => expect(response).to.be.eql(expectedResponse[0]));
-    });
-  });
 });

@@ -4,12 +4,14 @@ Ref: https://github.com/ZXVentures/code-challenge/blob/master/backend.md
 
 Esta é a camada de API do sistema de Sell Point. 
 
-Para rodar a aplicação pelo primeira vez:
+Para rodar a aplicação pelo primeira vez: 
 
 ```
-npm install
-npm start (create table when don't exist)
-npm test  
+$ make run (build dockers)
+
+(in container)
+$ npm start (create table when don't exist - first time)
+$ npm test 
 ```
 
 Os testes limpam a base e rodam os scripts.

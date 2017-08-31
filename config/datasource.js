@@ -18,7 +18,6 @@ const loadModels = (sequelize) => {
 
 export default() => {
   if (!database) {
-    console.log('process.env', process.env);
     const sequelize = new Sequelize(
       process.env.database || config.database || 'sell_point',
       process.env.database_user || config.database_user || 'root',

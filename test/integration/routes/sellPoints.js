@@ -45,7 +45,7 @@ describe('Routes SellPoints', () => {
   });
 
   describe('Route GET /pdv/1', () => {
-    it('should return a list of sell points', (done) => {
+    it('should return a sell point', (done) => {
       request
         .get('/pdvs/1')
         .end((err, res) => {

@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-46.57421, -21.785741]\n        }\n}"
+					"raw": "{\n        \"tradingName\": \"Adega da Cerveja - Pinheiros 2\",\n        \"ownerName\": \"Zé da Silva\",\n        \"document\": \"1432132123891/0001\",\n        \"coverageArea\": { \n          \"type\": \"MultiPolygon\", \n          \"coordinates\": [\n            [[[30, 20], [45, 40], [10, 40], [30, 20]]], \n            [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]\n          ]\n        }, \n        \"address\": { \n          \"type\": \"Point\",\n          \"coordinates\": [-40.57421, -15.785741]\n        }\n}"
 				},
 				"description": ""
 			},
@@ -50,7 +50,7 @@
 		{
 			"name": "GET pdvs LOADDEMO",
 			"request": {
-				"url": "http://localhost:8081/pdvs",
+				"url": "http://localhost:8081/pdvs/initDemo",
 				"method": "GET",
 				"header": [
 					{
@@ -70,7 +70,7 @@
 		{
 			"name": "GET pdv",
 			"request": {
-				"url": "http://localhost:8081/pdvs",
+				"url": "http://localhost:8081/pdvs/1",
 				"method": "GET",
 				"header": [
 					{
@@ -91,7 +91,7 @@
 			"name": "GET pdv find",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8081/pdvs/find?lat=-40&long=-21",
+					"raw": "http://localhost:8081/pdvs/find?lat=-43.23866&long=-22.99649",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,13 +104,13 @@
 					"query": [
 						{
 							"key": "lat",
-							"value": "-40",
+							"value": "-43.23866",
 							"equals": true,
 							"description": ""
 						},
 						{
 							"key": "long",
-							"value": "-21",
+							"value": "-22.99649",
 							"equals": true,
 							"description": ""
 						}
